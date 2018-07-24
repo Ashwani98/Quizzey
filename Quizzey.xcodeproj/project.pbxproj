@@ -8,20 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		1634739620F9CF870035427E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1634739520F9CF870035427E /* AppDelegate.swift */; };
-		1634739820F9CF870035427E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1634739720F9CF870035427E /* ViewController.swift */; };
+		1634739820F9CF870035427E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1634739720F9CF870035427E /* MainViewController.swift */; };
 		1634739B20F9CF870035427E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1634739920F9CF870035427E /* Main.storyboard */; };
 		1634739D20F9CF870035427E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1634739C20F9CF870035427E /* Assets.xcassets */; };
 		163473A020F9CF870035427E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1634739E20F9CF870035427E /* LaunchScreen.storyboard */; };
+		1656A5E52104ADD300524B9E /* NewQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656A5E42104ADD300524B9E /* NewQuestionVC.swift */; };
+		1656A5E72104CC5F00524B9E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656A5E62104CC5F00524B9E /* Question.swift */; };
+		1656A5EE2104CDDE00524B9E /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656A5ED2104CDDE00524B9E /* Quiz.swift */; };
+		166DCBFF21070BA900E48987 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DCBFE21070BA900E48987 /* Choice.swift */; };
+		166DCC0321071EBE00E48987 /* SelectQuizTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DCC0221071EBE00E48987 /* SelectQuizTVC.swift */; };
+		166DCC052107239700E48987 /* SelectQuizTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DCC042107239700E48987 /* SelectQuizTVCell.swift */; };
+		166DCC0721072D7300E48987 /* QuizTaken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DCC0621072D7300E48987 /* QuizTaken.swift */; };
+		5A72A5BD724A1E6953A93AAB /* Pods_Quizzey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF6E795EE3E865FDB40FF50 /* Pods_Quizzey.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1634739220F9CF870035427E /* Quizzey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1634739520F9CF870035427E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1634739720F9CF870035427E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1634739720F9CF870035427E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1634739A20F9CF870035427E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1634739C20F9CF870035427E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1634739F20F9CF870035427E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		163473A120F9CF870035427E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1656A5E42104ADD300524B9E /* NewQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestionVC.swift; sourceTree = "<group>"; };
+		1656A5E62104CC5F00524B9E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1656A5ED2104CDDE00524B9E /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		166DCBFE21070BA900E48987 /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
+		166DCC0221071EBE00E48987 /* SelectQuizTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuizTVC.swift; sourceTree = "<group>"; };
+		166DCC042107239700E48987 /* SelectQuizTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuizTVCell.swift; sourceTree = "<group>"; };
+		166DCC0621072D7300E48987 /* QuizTaken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuizTaken.swift; path = Quizzey/Controller/QuizTaken.swift; sourceTree = SOURCE_ROOT; };
+		43F4B4771F4AA6DC7274F035 /* Pods-Quizzey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quizzey.release.xcconfig"; path = "Pods/Target Support Files/Pods-Quizzey/Pods-Quizzey.release.xcconfig"; sourceTree = "<group>"; };
+		BFF6E795EE3E865FDB40FF50 /* Pods_Quizzey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quizzey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB8B65DE4ACDD227826F4027 /* Pods-Quizzey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quizzey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Quizzey/Pods-Quizzey.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A72A5BD724A1E6953A93AAB /* Pods_Quizzey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +59,8 @@
 			children = (
 				1634739420F9CF870035427E /* Quizzey */,
 				1634739320F9CF870035427E /* Products */,
+				7AAB2B96BDA4D4FE94B1D26B /* Pods */,
+				69E586154F226D98629DE88D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +76,61 @@
 			isa = PBXGroup;
 			children = (
 				1634739520F9CF870035427E /* AppDelegate.swift */,
-				1634739720F9CF870035427E /* ViewController.swift */,
-				1634739920F9CF870035427E /* Main.storyboard */,
-				1634739C20F9CF870035427E /* Assets.xcassets */,
-				1634739E20F9CF870035427E /* LaunchScreen.storyboard */,
+				1656A5E82104CC6500524B9E /* Model */,
+				1656A5E92104CC6D00524B9E /* View */,
+				1656A5EA2104CC8600524B9E /* Controller */,
 				163473A120F9CF870035427E /* Info.plist */,
 			);
 			path = Quizzey;
+			sourceTree = "<group>";
+		};
+		1656A5E82104CC6500524B9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1656A5ED2104CDDE00524B9E /* Quiz.swift */,
+				1656A5E62104CC5F00524B9E /* Question.swift */,
+				166DCBFE21070BA900E48987 /* Choice.swift */,
+				166DCC042107239700E48987 /* SelectQuizTVCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1656A5E92104CC6D00524B9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1634739C20F9CF870035427E /* Assets.xcassets */,
+				1634739E20F9CF870035427E /* LaunchScreen.storyboard */,
+				1634739920F9CF870035427E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1656A5EA2104CC8600524B9E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1634739720F9CF870035427E /* MainViewController.swift */,
+				166DCC0221071EBE00E48987 /* SelectQuizTVC.swift */,
+				1656A5E42104ADD300524B9E /* NewQuestionVC.swift */,
+				166DCC0621072D7300E48987 /* QuizTaken.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		69E586154F226D98629DE88D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFF6E795EE3E865FDB40FF50 /* Pods_Quizzey.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AAB2B96BDA4D4FE94B1D26B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB8B65DE4ACDD227826F4027 /* Pods-Quizzey.debug.xcconfig */,
+				43F4B4771F4AA6DC7274F035 /* Pods-Quizzey.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 163473A420F9CF870035427E /* Build configuration list for PBXNativeTarget "Quizzey" */;
 			buildPhases = (
+				6418B179415CA7770EBD80EC /* [CP] Check Pods Manifest.lock */,
 				1634738E20F9CF870035427E /* Sources */,
 				1634738F20F9CF870035427E /* Frameworks */,
 				1634739020F9CF870035427E /* Resources */,
+				9F6A32AF7FCE4A7D29BB1089 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,13 +202,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6418B179415CA7770EBD80EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quizzey-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F6A32AF7FCE4A7D29BB1089 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Quizzey/Pods-Quizzey-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Quizzey/Pods-Quizzey-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1634738E20F9CF870035427E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1634739820F9CF870035427E /* ViewController.swift in Sources */,
+				166DCC0321071EBE00E48987 /* SelectQuizTVC.swift in Sources */,
+				166DCBFF21070BA900E48987 /* Choice.swift in Sources */,
+				1634739820F9CF870035427E /* MainViewController.swift in Sources */,
+				1656A5EE2104CDDE00524B9E /* Quiz.swift in Sources */,
+				166DCC052107239700E48987 /* SelectQuizTVCell.swift in Sources */,
+				1656A5E72104CC5F00524B9E /* Question.swift in Sources */,
+				166DCC0721072D7300E48987 /* QuizTaken.swift in Sources */,
 				1634739620F9CF870035427E /* AppDelegate.swift in Sources */,
+				1656A5E52104ADD300524B9E /* NewQuestionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +391,7 @@
 		};
 		163473A520F9CF870035427E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB8B65DE4ACDD227826F4027 /* Pods-Quizzey.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +407,7 @@
 		};
 		163473A620F9CF870035427E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43F4B4771F4AA6DC7274F035 /* Pods-Quizzey.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
