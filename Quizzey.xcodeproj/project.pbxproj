@@ -110,8 +110,8 @@
 			children = (
 				1634739720F9CF870035427E /* MainViewController.swift */,
 				166DCC0221071EBE00E48987 /* SelectQuizTVC.swift */,
-				1656A5E42104ADD300524B9E /* NewQuestionVC.swift */,
 				166DCC0621072D7300E48987 /* QuizTaken.swift */,
+				1656A5E42104ADD300524B9E /* NewQuestionVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

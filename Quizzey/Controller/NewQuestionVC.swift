@@ -82,7 +82,7 @@ class NewQuestionVC: UIViewController {
     }
     
     func getChoices() -> List<Choice> {
-        var choices = List<Choice>()
+        let choices = List<Choice>()
         
         for index in 0...3{
             let choice = Choice()
