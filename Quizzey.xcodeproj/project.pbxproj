@@ -15,6 +15,7 @@
 		1656A5E52104ADD300524B9E /* NewQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656A5E42104ADD300524B9E /* NewQuestionVC.swift */; };
 		1656A5E72104CC5F00524B9E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656A5E62104CC5F00524B9E /* Question.swift */; };
 		1656A5EE2104CDDE00524B9E /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656A5ED2104CDDE00524B9E /* Quiz.swift */; };
+		16648F6E2108CB030009BDDA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16648F6D2108CB020009BDDA /* GoogleService-Info.plist */; };
 		166DCBFF21070BA900E48987 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DCBFE21070BA900E48987 /* Choice.swift */; };
 		166DCC0321071EBE00E48987 /* SelectQuizTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DCC0221071EBE00E48987 /* SelectQuizTVC.swift */; };
 		166DCC052107239700E48987 /* SelectQuizTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166DCC042107239700E48987 /* SelectQuizTVCell.swift */; };
@@ -33,6 +34,7 @@
 		1656A5E42104ADD300524B9E /* NewQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestionVC.swift; sourceTree = "<group>"; };
 		1656A5E62104CC5F00524B9E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		1656A5ED2104CDDE00524B9E /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		16648F6D2108CB020009BDDA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		166DCBFE21070BA900E48987 /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		166DCC0221071EBE00E48987 /* SelectQuizTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuizTVC.swift; sourceTree = "<group>"; };
 		166DCC042107239700E48987 /* SelectQuizTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuizTVCell.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				1656A5E92104CC6D00524B9E /* View */,
 				1656A5EA2104CC8600524B9E /* Controller */,
 				163473A120F9CF870035427E /* Info.plist */,
+				16648F6D2108CB020009BDDA /* GoogleService-Info.plist */,
 			);
 			path = Quizzey;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				163473A020F9CF870035427E /* LaunchScreen.storyboard in Resources */,
 				1634739D20F9CF870035427E /* Assets.xcassets in Resources */,
 				1634739B20F9CF870035427E /* Main.storyboard in Resources */,
+				16648F6E2108CB030009BDDA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,13 +232,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Quizzey/Pods-Quizzey-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

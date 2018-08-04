@@ -8,12 +8,21 @@
 
 import UIKit
 import RealmSwift
+import Firebase
+import SwiftyJSON
 
 class NewQuestionVC: UIViewController {
     
     let quiz = Quiz()
     let realm = try! Realm()
     
+    var values = [String:String]()
+    var ques = [String:Any]()
+    var quesDict = [String:Any]()
+    var quizDict = [String:Any]()
+    
+    
+
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionText: UITextView!
     
@@ -26,23 +35,10 @@ class NewQuestionVC: UIViewController {
     
     @IBAction func questionSaved(_ sender: UIButton!) {
         
-        let ques = Question()
-        ques.identifier = questionNumber
-        ques.text = questionText.text
-        ques.answer = answerIndex
-        ques.choices = getChoices()
-//        ques.answer = answerIndex
+        saveQuestionOffline()
         
-//        print(ques.identifier)
-//        print(ques.text)
-//        for index in 0...3{
-//            print(ques.choices[index])
-//        }
-//        print(ques.answer)
-        
-        
-        
-        quiz.questions.append(ques)
+        ques = ["text" : "\(questionText.text!)" , "options" : values, "correct" : answerIndex]
+        quesDict["\(questionNumber)"] = ques
         questionNumber += 1
         clearFields(with: questionNumber)
     }
@@ -56,19 +52,57 @@ class NewQuestionVC: UIViewController {
     
  
     @IBAction func saveQuiz(_ sender: UIBarButtonItem) {
-        try! realm.write {
-            realm.add(quiz)
-        }
-      //  self.dismiss(animated: true, completion: nil)
-//        //navigationController?.dismiss(animated: true, completion: nil)
-//        self.navigationController?.dismiss(animated: true, completion: nil)
+        
+        saveOffline()
+        saveOnline()
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = quiz.name
         questionLabel.text = "Question " + String(questionNumber)
+    }
+
+    
+    
+    func saveQuestionOffline(){
+        let ques = Question()
+        ques.identifier = questionNumber
+        ques.text = questionText.text
+        ques.answer = answerIndex
+        ques.choices = getChoices()
+        quiz.questions.append(ques)
+    }
+    
+    
+    
+    func saveOffline(){
+        try! realm.write {
+            realm.add(quiz)
+        }
+    }
+    
+    
+    func saveOnline(){
+        
+        
+        let quizDB = Database.database().reference().child("QuizData")
+        quizDict = ["\(quiz.name)" : quesDict]
+        
+        quizDB.childByAutoId().setValue(quizDict){
+            (error,reference) in
+            if error == nil{
+                print("saved")
+            }
+            else{
+                print(error!)
+            }
+        }
+
     }
     
     
@@ -81,8 +115,11 @@ class NewQuestionVC: UIViewController {
 
     }
     
+    
     func getChoices() -> List<Choice> {
         let choices = List<Choice>()
+        
+        var val = [String]()
         
         for index in 0...3{
             let choice = Choice()
@@ -91,9 +128,10 @@ class NewQuestionVC: UIViewController {
                 choice.correctChoice = true
             }
             choices.append(choice)
+            val.append(choice.choice)
         }
         
-        
+        values = [ "1" : val[0], "2" : val[1], "3" : val[2], "4" : val[3]]
         return choices
     }
     
