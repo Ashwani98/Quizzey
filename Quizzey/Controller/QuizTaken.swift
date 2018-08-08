@@ -12,9 +12,17 @@ class QuizTaken: UIViewController {
     
     //var quiz = Quiz()
     var selectedQuiz: Quiz?
-    var questionNumber = 0
-    var correctAnswer = 0
-    var totalQuestons: Int { return (selectedQuiz?.questions.count)! }
+    
+    
+    var optionsData = [String:String]()
+    var ques = [String:Any]()
+    var quiz = [String:Any]()
+    var quizTitle = ""
+    
+    
+    var questionNumber = 1
+    var correctAnswer: Int { return ques["correct"] as! Int}
+    var totalQuestons: Int { return quiz["count"] as! Int }
     var score = 0
     
     
@@ -66,24 +74,58 @@ class QuizTaken: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(quizTitle)
+        print(quiz)
+        
+
         scoreView.isHidden = true
         scoreButton.isHidden = true
         scoreText.isHidden = true
-        navigationItem.title = selectedQuiz?.name
-        questionText.text = selectedQuiz?.questions[questionNumber].text
-//        questionNumber = (selectedQuiz?.questions.startIndex)!
-        correctAnswer = (selectedQuiz?.questions[questionNumber].answer)!
         
-        setOptions()
+        setUIwithOnlineData()
+        
+//        setUIwithOfflineData()
         
     }
     
-    func setOptions(){
+//    func setUIwithRealmData(){
+//
+//        navigationItem.title = selectedQuiz?.name
+//        questionText.text = selectedQuiz?.questions[questionNumber].text
+//        questionNumber = (selectedQuiz?.questions.startIndex)!
+//        correctAnswer = (selectedQuiz?.questions[questionNumber].answer)!
+//        setOptionsWithRealm()
+//
+//
+//    }
+    
+    func setUIwithOnlineData(){
+        navigationItem.title = quizTitle
+        ques = quiz["\(questionNumber)"] as! Dictionary<String,Any>
+        optionsData = ques["options"] as! Dictionary<String,String>
+        
+        questionText.text = ques["text"] as! String
+        setOptionswithOnlineData()
+        
+        
+    }
+    
+    
+    func setOptionswithOnlineData(){
+        
         for index in 0...3{
-            options[index].setTitle(selectedQuiz?.questions[questionNumber].choices[index].choice, for: .normal)
+            options[index].setTitle(optionsData["\(index)"], for: .normal)
             options[index].backgroundColor = UIColor.lightGray
         }
+        
     }
+    
+//    func setOptionswithRealm(){
+//        for index in 0...3{
+//            options[index].setTitle(selectedQuiz?.questions[questionNumber].choices[index].choice, for: .normal)
+//            options[index].backgroundColor = UIColor.lightGray
+//        }
+//    }
     
     
     func nextQuestion(){
@@ -104,7 +146,7 @@ class QuizTaken: UIViewController {
         }
         //scoreButton.isHidden = false
         scoreText.isHidden = false
-        scoreText.text = "\(score) / \(totalQuestons)"
+        scoreText.text = "\(score) / \(totalQuestons - 1)"
         if score >= Int(totalQuestons/2){
             won()
         }

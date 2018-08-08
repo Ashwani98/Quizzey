@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import Firebase
+import FirebaseStorage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //let realm = try! Realm()
         print(Realm.Configuration.defaultConfiguration.fileURL)
         FirebaseApp.configure()
+//        let storage = Storage.storage()
+//        print("sss")
+//        print(storage)
         return true
     }
 

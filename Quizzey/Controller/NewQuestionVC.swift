@@ -6,6 +6,7 @@
 //  Copyright © 2018 Ashwani  Agrawal. All rights reserved.
 //
 
+
 import UIKit
 import RealmSwift
 import Firebase
@@ -37,8 +38,9 @@ class NewQuestionVC: UIViewController {
         
         saveQuestionOffline()
         
-        ques = ["text" : "\(questionText.text!)" , "options" : values, "correct" : answerIndex]
+        ques = ["text" : "\(questionText.text!)" , "options" : values, "correct" : answerIndex]        
         quesDict["\(questionNumber)"] = ques
+        
         questionNumber += 1
         clearFields(with: questionNumber)
     }
@@ -91,7 +93,9 @@ class NewQuestionVC: UIViewController {
         
         
         let quizDB = Database.database().reference().child("QuizData")
-        quizDict = ["\(quiz.name)" : quesDict]
+        quesDict["count"] = questionNumber
+
+        quizDict = ["name" : quiz.name, "details": quesDict]
         
         quizDB.childByAutoId().setValue(quizDict){
             (error,reference) in
@@ -119,8 +123,6 @@ class NewQuestionVC: UIViewController {
     func getChoices() -> List<Choice> {
         let choices = List<Choice>()
         
-        var val = [String]()
-        
         for index in 0...3{
             let choice = Choice()
             choice.choice  = options[index].text!
@@ -128,10 +130,11 @@ class NewQuestionVC: UIViewController {
                 choice.correctChoice = true
             }
             choices.append(choice)
-            val.append(choice.choice)
+            
+            values["\(index)"] = choice.choice
         }
+        values["count"] = "4"
         
-        values = [ "1" : val[0], "2" : val[1], "3" : val[2], "4" : val[3]]
         return choices
     }
     

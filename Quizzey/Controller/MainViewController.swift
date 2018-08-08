@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class MainViewController: UIViewController {
 
@@ -45,6 +46,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+//        let ref = Storage.storage().reference().child("data")        
     }
     
     func generateAlert(){

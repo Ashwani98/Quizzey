@@ -11,18 +11,9 @@ import RealmSwift
 
 class SelectQuizTVCell: UITableViewCell {
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
-    
-        
-        
     }
     
-    
-
-    
-
 }
